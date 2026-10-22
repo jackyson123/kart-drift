@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-noto-tc), 'Noto Sans TC', system-ui, sans-serif;
+  --font-display: var(--font-bungee), var(--font-noto-tc), system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-hud-panel: var(--hud-panel);
+  --color-success: var(--success);
+  --color-sky: var(--sky);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: dark;
+  --background: #102a43;
+  --foreground: #f7f9fc;
+  --hud-panel: #0b1d30;
+  --card: #15334f;
+  --card-foreground: #f7f9fc;
+  --popover: #15334f;
+  --popover-foreground: #f7f9fc;
+  --primary: #ffc531;
+  --primary-foreground: #0b1d30;
+  --secondary: #1d4266;
+  --secondary-foreground: #f7f9fc;
+  --muted: #1d4266;
+  --muted-foreground: #a9bcd3;
+  --accent: #e63946;
+  --accent-foreground: #f7f9fc;
+  --success: #2bb673;
+  --sky: #3ec8ff;
+  --destructive: #e63946;
+  --border: #2a5580;
+  --input: #2a5580;
+  --ring: #ffc531;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overscroll-behavior: none;
+  }
+}
